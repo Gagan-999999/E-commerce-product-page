@@ -691,7 +691,7 @@ a:focus-visible {
   box-shadow: 0 2px 5px var(--color-black-opace);
   border-radius: var(--btn-border-radius);
   border-top-left-radius: 0;
-  z-index: var(--z-100);
+  /* z-index: var(--z-100); */
   display: flex;
   gap: 0.5rem;
   align-items: start;
@@ -702,21 +702,25 @@ a:focus-visible {
   0% {
     opacity: 0;
     transform: translateX(-50%) translateY(-1rem);
+    z-index: 0;
   }
 
   15% {
     opacity: 1;
     transform: translateX(-50%) translateY(0rem);
+    z-index: var(--z-100);
   }
 
   85% {
     opacity: 1;
     transform: translateX(-50%) translateY(0rem);
+    z-index: var(--z-100);
   }
 
   100% {
     opacity: 0;
     transform: translateX(-50%) translateY(0px);
+    z-index: 0;
   }
 }
 
