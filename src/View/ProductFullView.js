@@ -22,7 +22,8 @@ class ProductView extends ParentProductView {
   }
 
   closeViewOnMediaChange(e) {
-    if (!e.matches) this._closeView();
+    if (!e.matches && this._parentElement.childNodes.length > 0)
+      this._closeView();
   }
 
   _escapeView(e) {
