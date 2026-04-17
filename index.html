@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Fall Limited Edition Sneakers product page"
+    />
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="/src/controller.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <!-- Logo (home link) -->
+        <a href="/">
+          <img
+            src="images/logo.svg"
+            alt="Sneakers homepage"
+            width="138"
+            height="20"
+          />
+        </a>
+
+        <!-- Mobile menu toggle -->
+        <button
+          class="open-nav-btn nav-btn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          aria-label="Toggle navigation menu"
+        >
+          <img
+            src="images/icon-menu.svg"
+            alt=""
+            aria-hidden="true"
+            width="18"
+            height="17"
+          />
+        </button>
+
+        <!-- Navigation -->
+        <nav
+          id="primary-navigation"
+          class="primary-nav hidden"
+          aria-label="Main navigation"
+        >
+          <button
+            class="close-nav-btn nav-btn"
+            type="button"
+            aria-controls="primary-navigation"
+            aria-label="Close navigation menu"
+          >
+            <img
+              src="images/icon-close.svg"
+              alt=""
+              aria-hidden="true"
+              width="17"
+              height="18"
+            />
+          </button>
+          <ul>
+            <li><a href="/">Collections</a></li>
+            <li><a href="/">Men</a></li>
+            <li><a href="/">Women</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-right">
+        <!-- Cart button -->
+        <div class="cart-btn-container">
+          <button
+            class="cart-btn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="cart-panel"
+            aria-label="Open shopping cart"
+          >
+            <img
+              src="images/icon-cart.svg"
+              alt=""
+              aria-hidden="true"
+              width="22"
+              height="20"
+            />
+
+            <span
+              class="cart-item-count hidden"
+              aria-live="polite"
+              aria-atomic="true"
+              >0</span
+            >
+          </button>
+        </div>
+
+        <div class="cart-popup"></div>
+
+        <button type="button" class="profile">
+          <img src="images/image-avatar.png" alt="User profile" />
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <article class="product"></article>
+      <div class="product-full-view"></div>
+    </main>
+
+    <div class="overlay hidden"></div>
+    <div class="product-fullview-overlay hidden"></div>
+    <div class="cart-overlay hidden"></div>
+    <div class="message"></div>
+  </body>
+</html>
