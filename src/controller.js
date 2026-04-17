@@ -45,7 +45,7 @@ function controlQuantity(quantifier) {
 
 function controlAddToCart() {
   // 0. Show the message that the item has been added to the cart
-  MessageView.render({ emoji: "✔️", text: "Item added to cart." });
+  MessageView.init({ emoji: "✔️", text: "Item added to cart." });
 
   // 1. Add the item to the cart
   model.addItem();
@@ -69,11 +69,11 @@ function controlCreateCartPanel() {
 }
 
 function controlCartPanelCheckout() {
-  MessageView.render({ emoji: "⭕", text: "Processing checkout..." });
+  MessageView.init({ emoji: "⭕", text: "Processing checkout..." });
 
   setTimeout(function () {
     // 0. Show the message that the checkout process has been completed
-    MessageView.render({
+    MessageView.init({
       emoji: "✅",
       text: "Checkout completed. Thank you for your purchase!",
     });
@@ -88,7 +88,7 @@ function controlCartPanelCheckout() {
 
 function controlCartPanelDelete(id) {
   // 0. Show the message that the item has been removed from the cart
-  MessageView.render({ emoji: "⛔", text: "Item removed from cart." });
+  MessageView.init({ emoji: "⛔", text: "Item removed from cart." });
 
   // 1. Delete the item from the cart
   model.deleteItem(id);
